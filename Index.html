@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExploreWorld — Travel With Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">ExploreWorld</div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#tours">Tours</a></li>
+                <li><a href="#booking">Booking</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+            </ul>
+
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span><span></span><span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <h1>Discover Your Next Adventure</h1>
+        <p>Explore the world’s most beautiful destinations.</p>
+        <a href="#destinations" class="btn">Start Exploring</a>
+    </section>
+
+    <!-- DESTINATIONS -->
+    <section id="destinations">
+        <h2>Popular Destinations</h2>
+
+        <div class="grid">
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?paris" alt="">
+                <h3>Paris</h3>
+                <p>The city of lights and love.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?tokyo" alt="">
+                <h3>Tokyo</h3>
+                <p>Where tradition meets the future.</p>
+            </div>
+
+            <div class="card">
+                <img src="https://source.unsplash.com/400x300/?bali" alt="">
+                <h3>Bali</h3>
+                <p>Tropical paradise with stunning beaches.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOURS -->
+    <section id="tours">
+        <h2>Featured Tours</h2>
+
+        <div class="tour-list">
+            <div class="tour">
+                <h3>European Explorer</h3>
+                <p>10 days • France, Italy, Switzerland</p>
+                <span class="price">$1,499</span>
+            </div>
+
+            <div class="tour">
+                <h3>Asian Highlights</h3>
+                <p>12 days • Japan, Thailand, Singapore</p>
+                <span class="price">$1,899</span>
+            </div>
+
+            <div class="tour">
+                <h3>Tropical Escape</h3>
+                <p>7 days • Maldives, Bali</p>
+                <span class="price">$999</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section id="booking">
+        <h2>Book Your Trip</h2>
+
+        <form class="booking">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <select required>
+                <option>Select Destination</option>
+                <option>Paris</option>
+                <option>Tokyo</option>
+                <option>Bali</option>
+            </select>
+            <input type="date" required>
+            <button class="btn" style="width:100%; margin-top:10px;">Submit</button>
+        </form>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+        <h2>What Travelers Say</h2>
+
+        <div class="reviews">
+            <div class="review">
+                <p>“Amazing experience! Everything was perfectly organized.”</p>
+                <h4>— Sarah M.</h4>
+            </div>
+
+            <div class="review">
+                <p>“Best trip of my life. Highly recommended!”</p>
+                <h4>— Daniel K.</h4>
+            </div>
+
+            <div class="review">
+                <p>“Beautiful destinations and great service.”</p>
+                <h4>— Maria L.</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery">
+        <h2>Travel Gallery</h2>
+
+        <div class="gallery">
+            <img src="https://source.unsplash.com/400x400/?mountains">
+            <img src="https://source.unsplash.com/400x400/?beach">
+            <img src="https://source.unsplash.com/400x400/?city">
+            <img src="https://source.unsplash.com/400x400/?forest">
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 ExploreWorld. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
