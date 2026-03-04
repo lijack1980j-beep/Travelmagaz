@@ -13,6 +13,7 @@
     <header id="header">
         <nav class="navbar">
             <div class="logo"><i class="fa-solid fa-earth-americas"></i> ExploreWorld</div>
+            
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#destinations">Destinations</a></li>
@@ -21,7 +22,8 @@
                 <li><a href="#testimonials">Reviews</a></li>
                 <li><a href="#gallery">Gallery</a></li>
             </ul>
-            <div class="hamburger" onclick="toggleMenu()">
+
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
                 <span></span><span></span><span></span>
             </div>
         </nav>
@@ -117,7 +119,7 @@
                 <h2>Ready to pack your bags?</h2>
                 <p>Book your trip today and get an exclusive 10% discount on your first adventure with us.</p>
             </div>
-            <form class="booking-form">
+            <form id="bookingForm" class="booking-form">
                 <div class="input-group">
                     <input type="text" placeholder="Full Name" required>
                 </div>
@@ -127,15 +129,15 @@
                 <div class="input-group">
                     <select required>
                         <option value="" disabled selected>Select Destination</option>
-                        <option>Paris</option>
-                        <option>Tokyo</option>
-                        <option>Bali</option>
+                        <option value="paris">Paris</option>
+                        <option value="tokyo">Tokyo</option>
+                        <option value="bali">Bali</option>
                     </select>
                 </div>
                 <div class="input-group">
                     <input type="date" required>
                 </div>
-                <button class="btn btn-primary" style="width:100%;">Confirm Booking</button>
+                <button type="submit" class="btn btn-primary" style="width:100%;">Confirm Booking</button>
             </form>
         </div>
     </section>
@@ -170,10 +172,10 @@
             <h2>Travel Gallery</h2>
         </div>
         <div class="gallery">
-            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=400&auto=format&fit=crop" class="fade-in">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400&auto=format&fit=crop" class="fade-in">
-            <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=400&auto=format&fit=crop" class="fade-in">
-            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=400&auto=format&fit=crop" class="fade-in">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=400&auto=format&fit=crop" class="fade-in" alt="Gallery image">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400&auto=format&fit=crop" class="fade-in" alt="Gallery image">
+            <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=400&auto=format&fit=crop" class="fade-in" alt="Gallery image">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=400&auto=format&fit=crop" class="fade-in" alt="Gallery image">
         </div>
     </section>
 
