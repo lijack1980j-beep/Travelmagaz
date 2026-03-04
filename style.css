@@ -17,7 +17,8 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Prevents sticky nav from overlapping content */
 }
 
 body {
@@ -36,11 +37,10 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
 }
 
 .navbar {
@@ -76,7 +76,6 @@ header {
     transition: var(--transition);
 }
 
-/* Modern Nav Underline Hover */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -91,12 +90,13 @@ header {
 .nav-links a:hover { color: var(--primary-color); }
 .nav-links a:hover::after { width: 100%; }
 
-/* MOBILE MENU */
+/* MOBILE MENU HAMBURGER */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    gap: 5px;
+    gap: 6px;
+    z-index: 1001;
 }
 
 .hamburger span {
@@ -106,6 +106,11 @@ header {
     border-radius: 5px;
     transition: var(--transition);
 }
+
+/* Transform hamburger to an 'X' when active */
+.hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 
 /* HERO */
 .hero {
@@ -131,9 +136,7 @@ header {
     margin-bottom: 20px;
 }
 
-.highlight {
-    color: #60a5fa;
-}
+.highlight { color: #60a5fa; }
 
 .hero p {
     font-size: 1.2rem;
@@ -149,6 +152,7 @@ header {
     cursor: pointer;
     border: none;
     transition: var(--transition);
+    font-size: 1rem;
 }
 
 .btn-primary {
@@ -164,7 +168,7 @@ header {
 }
 
 /* SECTIONS */
-section { padding: 100px 0; }
+section { padding: 80px 0; }
 .section-title { text-align: center; margin-bottom: 50px; }
 .section-title h2 { font-size: 2.5rem; color: var(--text-dark); margin-bottom: 10px; }
 .section-title p { color: var(--text-light); }
@@ -187,10 +191,7 @@ section { padding: 100px 0; }
 
 .card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
 
-.card-img-wrapper {
-    position: relative;
-    overflow: hidden;
-}
+.card-img-wrapper { position: relative; overflow: hidden; }
 
 .card img {
     width: 100%;
@@ -219,13 +220,7 @@ section { padding: 100px 0; }
 .card p { color: var(--text-light); font-size: 0.95rem; line-height: 1.6; }
 
 /* TOURS */
-.tour-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
+.tour-list { display: flex; flex-direction: column; gap: 20px; max-width: 800px; margin: 0 auto; }
 
 .tour {
     background: var(--bg-card);
@@ -278,18 +273,13 @@ section { padding: 100px 0; }
 }
 
 /* TESTIMONIALS */
-.reviews {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
+.reviews { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
 
 .review {
     background: white;
     padding: 30px;
     border-radius: 16px;
     box-shadow: 0 10px 15px -3px rgba(0,0,0,0.05);
-    position: relative;
 }
 
 .stars { color: #fbbf24; margin-bottom: 15px; font-size: 0.9rem; }
@@ -297,11 +287,7 @@ section { padding: 100px 0; }
 .review h4 { color: var(--text-dark); font-weight: 600; }
 
 /* GALLERY */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
+.gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
 
 .gallery img {
     width: 100%;
@@ -334,10 +320,9 @@ footer { background: #0f172a; color: white; padding: 60px 0 30px; }
 @media (max-width: 768px) {
     .nav-links {
         position: absolute;
-        top: 70px;
+        top: 75px;
         right: 0;
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.98);
         width: 100%;
         flex-direction: column;
         align-items: center;
@@ -349,4 +334,5 @@ footer { background: #0f172a; color: white; padding: 60px 0 30px; }
     .hamburger { display: flex; }
     .hero h1 { font-size: 2.5rem; }
     .booking-wrapper { grid-template-columns: 1fr; }
+    .tour { flex-direction: column; text-align: center; gap: 15px; }
 }
