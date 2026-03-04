@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ExploreWorld — Travel With Us</title>
+    <title>ExploreWorld — Modern Travel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <header>
+    <header id="header">
         <nav class="navbar">
-            <div class="logo">ExploreWorld</div>
-
+            <div class="logo"><i class="fa-solid fa-earth-americas"></i> ExploreWorld</div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#destinations">Destinations</a></li>
@@ -21,125 +21,172 @@
                 <li><a href="#testimonials">Reviews</a></li>
                 <li><a href="#gallery">Gallery</a></li>
             </ul>
-
             <div class="hamburger" onclick="toggleMenu()">
                 <span></span><span></span><span></span>
             </div>
         </nav>
     </header>
 
-    <!-- HERO -->
     <section class="hero" id="home">
-        <h1>Discover Your Next Adventure</h1>
-        <p>Explore the world’s most beautiful destinations.</p>
-        <a href="#destinations" class="btn">Start Exploring</a>
+        <div class="hero-content fade-in">
+            <h1>Discover Your Next <span class="highlight">Adventure</span></h1>
+            <p>Explore the world’s most breathtaking destinations with curated, unforgettable experiences.</p>
+            <a href="#destinations" class="btn btn-primary">Start Exploring <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
     </section>
 
-    <!-- DESTINATIONS -->
-    <section id="destinations">
-        <h2>Popular Destinations</h2>
+    <section id="destinations" class="container">
+        <div class="section-title fade-in">
+            <h2>Popular Destinations</h2>
+            <p>Find the perfect spot for your next getaway.</p>
+        </div>
 
         <div class="grid">
-            <div class="card">
-                <img src="https://source.unsplash.com/400x300/?paris" alt="">
-                <h3>Paris</h3>
-                <p>The city of lights and love.</p>
+            <div class="card fade-in">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?q=80&w=600&auto=format&fit=crop" alt="Paris">
+                    <span class="badge">Trending</span>
+                </div>
+                <div class="card-content">
+                    <h3><i class="fa-solid fa-location-dot"></i> Paris, France</h3>
+                    <p>The city of lights, love, and endless architectural wonders.</p>
+                </div>
             </div>
 
-            <div class="card">
-                <img src="https://source.unsplash.com/400x300/?tokyo" alt="">
-                <h3>Tokyo</h3>
-                <p>Where tradition meets the future.</p>
+            <div class="card fade-in">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?q=80&w=600&auto=format&fit=crop" alt="Tokyo">
+                </div>
+                <div class="card-content">
+                    <h3><i class="fa-solid fa-location-dot"></i> Tokyo, Japan</h3>
+                    <p>Where ancient tradition meets vibrant, futuristic cityscapes.</p>
+                </div>
             </div>
 
-            <div class="card">
-                <img src="https://source.unsplash.com/400x300/?bali" alt="">
-                <h3>Bali</h3>
-                <p>Tropical paradise with stunning beaches.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- TOURS -->
-    <section id="tours">
-        <h2>Featured Tours</h2>
-
-        <div class="tour-list">
-            <div class="tour">
-                <h3>European Explorer</h3>
-                <p>10 days • France, Italy, Switzerland</p>
-                <span class="price">$1,499</span>
-            </div>
-
-            <div class="tour">
-                <h3>Asian Highlights</h3>
-                <p>12 days • Japan, Thailand, Singapore</p>
-                <span class="price">$1,899</span>
-            </div>
-
-            <div class="tour">
-                <h3>Tropical Escape</h3>
-                <p>7 days • Maldives, Bali</p>
-                <span class="price">$999</span>
+            <div class="card fade-in">
+                <div class="card-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?q=80&w=600&auto=format&fit=crop" alt="Bali">
+                    <span class="badge">Relax</span>
+                </div>
+                <div class="card-content">
+                    <h3><i class="fa-solid fa-location-dot"></i> Bali, Indonesia</h3>
+                    <p>A tropical paradise with stunning beaches and lush jungles.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- BOOKING FORM -->
-    <section id="booking">
-        <h2>Book Your Trip</h2>
-
-        <form class="booking">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <select required>
-                <option>Select Destination</option>
-                <option>Paris</option>
-                <option>Tokyo</option>
-                <option>Bali</option>
-            </select>
-            <input type="date" required>
-            <button class="btn" style="width:100%; margin-top:10px;">Submit</button>
-        </form>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials">
-        <h2>What Travelers Say</h2>
-
-        <div class="reviews">
-            <div class="review">
-                <p>“Amazing experience! Everything was perfectly organized.”</p>
-                <h4>— Sarah M.</h4>
+    <section id="tours" class="bg-light">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Featured Tours</h2>
+                <p>Curated itineraries for the modern traveler.</p>
             </div>
 
-            <div class="review">
-                <p>“Best trip of my life. Highly recommended!”</p>
-                <h4>— Daniel K.</h4>
-            </div>
+            <div class="tour-list">
+                <div class="tour fade-in">
+                    <div class="tour-info">
+                        <h3>European Explorer</h3>
+                        <p><i class="fa-regular fa-clock"></i> 10 days • France, Italy, Switzerland</p>
+                    </div>
+                    <span class="price">$1,499</span>
+                </div>
 
-            <div class="review">
-                <p>“Beautiful destinations and great service.”</p>
-                <h4>— Maria L.</h4>
+                <div class="tour fade-in">
+                    <div class="tour-info">
+                        <h3>Asian Highlights</h3>
+                        <p><i class="fa-regular fa-clock"></i> 12 days • Japan, Thailand, Singapore</p>
+                    </div>
+                    <span class="price">$1,899</span>
+                </div>
+
+                <div class="tour fade-in">
+                    <div class="tour-info">
+                        <h3>Tropical Escape</h3>
+                        <p><i class="fa-regular fa-clock"></i> 7 days • Maldives, Bali</p>
+                    </div>
+                    <span class="price">$999</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- GALLERY -->
-    <section id="gallery">
-        <h2>Travel Gallery</h2>
+    <section id="booking" class="container">
+        <div class="booking-wrapper fade-in">
+            <div class="booking-text">
+                <h2>Ready to pack your bags?</h2>
+                <p>Book your trip today and get an exclusive 10% discount on your first adventure with us.</p>
+            </div>
+            <form class="booking-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-group">
+                    <select required>
+                        <option value="" disabled selected>Select Destination</option>
+                        <option>Paris</option>
+                        <option>Tokyo</option>
+                        <option>Bali</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <input type="date" required>
+                </div>
+                <button class="btn btn-primary" style="width:100%;">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
 
+    <section id="testimonials" class="bg-light">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>What Travelers Say</h2>
+            </div>
+            <div class="reviews">
+                <div class="review fade-in">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>“Amazing experience! Everything was perfectly organized from start to finish.”</p>
+                    <h4>— Sarah M.</h4>
+                </div>
+                <div class="review fade-in">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>“Best trip of my life. The tour guides were exceptional. Highly recommended!”</p>
+                    <h4>— Daniel K.</h4>
+                </div>
+                <div class="review fade-in">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i></div>
+                    <p>“Beautiful destinations and great service. Will definitely book again.”</p>
+                    <h4>— Maria L.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="container">
+        <div class="section-title fade-in">
+            <h2>Travel Gallery</h2>
+        </div>
         <div class="gallery">
-            <img src="https://source.unsplash.com/400x400/?mountains">
-            <img src="https://source.unsplash.com/400x400/?beach">
-            <img src="https://source.unsplash.com/400x400/?city">
-            <img src="https://source.unsplash.com/400x400/?forest">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=400&auto=format&fit=crop" class="fade-in">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=400&auto=format&fit=crop" class="fade-in">
+            <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=400&auto=format&fit=crop" class="fade-in">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=400&auto=format&fit=crop" class="fade-in">
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
-        <p>© 2026 ExploreWorld. All rights reserved.</p>
+        <div class="container footer-content">
+            <div class="logo"><i class="fa-solid fa-earth-americas"></i> ExploreWorld</div>
+            <div class="socials">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <p>© 2026 ExploreWorld. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
